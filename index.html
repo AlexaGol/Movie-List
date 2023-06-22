@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+    <button class="bottone5" id="top-button" onclick="showfields(event)">Add Movies</button>
+    <div class="card swing-in-top-fwd" id="top-card">
+      <form class="mb-3"> 
+          <div>
+              <input class="input" id="mov-title"type="text" placeholder="Movie Title">
+          </div>
+          <div>
+              <input class="input" id="mov-img" type="text" placeholder="Image URL">
+          </div>
+          <div>
+              <input class="input" type="text" id="mov-ratin"
+              min = "1"
+              max = "5"
+              placeholder="Movie Rating">
+          </div>
+      </form>
+    <button class="bottone5" onclick="addMovie()">Save</button>
+    </div>
+    <div class="card swing-in-top-fwd" id="bottom-card">
+      <table id="table">
+          <thead>
+            <tr>
+              <th scope="col">Imgae</th>
+              <th scope="col">Title</th>
+              <th scope="col">Rating</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <!-- <tbody>
+            <tr class="movie-list">
+              <td scope="row" class="col1" id="mov-img">
+                  <img 
+                  height="150"
+                  style="border: 2px solid rgb(255, 252, 252); padding:2px"
+                  src="https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png" alt="">
+              </td>
+              <td class="col2" id="mov-title">Spirited Away</td>
+              <td class="col3" id="mov-ratin"> <p id="ratin"> 5</p> </td>
+              <td>
+                <span onclick="rateUp()"><i class="fa-regular fa-hand-point-up fa-2xl"></i></span>
+                <span onclick="rateDown()"><i class="fa-regular fa-hand-point-down fa-2xl"></i></span>
+              </td>
+              <td class="col4">
+                <button class="btn-bottom" onclick="removeMovie(this)">
+                <i class="fa-regular fa-circle-xmark fa-2xl">
+                </i>
+                </button>
+              </td>
+            </tr>
+            <br>
+          </tbody> -->
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+body{
+    background-image: url(./Images/background.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.card{
+    padding: 20px;
+    margin: 10px;
+    box-shadow: rgba(238, 238, 241, 0.25)
+                0px 50px 100px -20px, rgba(241, 234, 234, 0.3) 
+                0px 30px 60px -30px;
+    background: linear-gradient(293deg, rgb(25 61 73) 5%,
+                rgb(72, 225, 255) 100%);
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    border-radius: 8px; 
+}
+#top-card{
+    display: none;
+    align-items: center;
+}
+/* Top card/bottom card animation */
+.swing-in-top-fwd {
+	-webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+h1{
+    text-align: center;
+    font-family: 'Comforter', cursive;
+    color: #FFFFFF;
+    font-size: 165px;
+    line-height: 160px; 
+    font-weight: normal; 
+    margin-bottom: 0px; 
+    margin-top: 40px; 
+    text-shadow: 0 2px 2px rgb(25 61 73);;
+}
+
+
+
+/* inputs */
+.input {
+    height: 30px;
+    width: 700px;
+    border-radius: 8px;
+    border: 2px solid  #2c9caf;
+    outline: none;
+    transition: 200ms ease-in;
+    padding-left: 1rem;
+    margin: 5px;
+  }
+  
+  .input:focus {
+    border-bottom: 4px solid  #2c9caf;
+    padding-top: 2px;
+  }
+  
+  .input::placeholder {
+    color: #16606d;
+    opacity: 0.6;
+  }
+  /* buttons top  */
+  .bottone5 {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #2c9caf;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+  }
+  
+  .bottone5:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+  
+  .bottone5::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .bottone5:hover::before {
+    width: 250%;
+  }
+#top-button{
+    width: 250px;
+}   
+/* table */
+#table {
+  display: none;
+}
+
+.col1 {
+    
+    color: #FFFFFF;
+    font-family: 'Caveat', cursive;
+    font-size: 45px;
+    font-weight: lighter;
+    text-shadow: 0 2px 2px rgb(25 61 73);
+    text-align: center;   
+}
+.col2 {
+  
+  color: #FFFFFF;
+  font-family: 'Caveat', cursive;
+  font-size: 45px;
+  font-weight: lighter;
+  text-shadow: 0 2px 2px rgb(25 61 73);
+  text-align: center;   
+}
+.col3 {
+  
+  color: #FFFFFF;
+  font-family: 'Caveat', cursive;
+  font-size: 45px;
+  font-weight: lighter;
+  text-shadow: 0 2px 2px rgb(25 61 73);
+  text-align: center;   
+}
+.col4 {
+  
+  color: #FFFFFF;
+  font-family: 'Caveat', cursive;
+  font-size: 45px;
+  font-weight: lighter;
+  text-shadow: 0 2px 2px rgb(25 61 73);
+  text-align: left;   
+}
+th {
+  color: #FFFFFF;
+  font-family: 'Caveat', cursive;
+  font-size: 45px;
+  font-weight: lighter;
+  text-shadow: 0 2px 2px rgb(25 61 73);
+  text-align: center;   
+}
+
+/* icon buttons */
+.btn-bottom{
+    border: none;
+    background: none;
+    color: #FFFFFF;
+}
+.btn-bottom:hover{
+    border: none;
+    background: none;
+    color: red;
+    
+}
+span{
+    color:#FFFFFF;
+    text-shadow: 0 2px 2px rgb(25 61 73);
+    transition: transform 250ms, opacity 400ms;
+
+}
+span:hover{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
